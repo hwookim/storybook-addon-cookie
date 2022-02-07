@@ -3,7 +3,7 @@
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "CommonJS",
-    "target": "esnext",
+    "target": "es5",
     "strict": true,
     "allowJs": true,
     "moduleResolution": "node",

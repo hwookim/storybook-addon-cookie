@@ -1,10 +1,11 @@
 {
   "name": "storybook-addon-cookie",
   "version": "1.0.0",
-  "description": "Storybook addon for mocking document.cookie",
+  "description": "Storybook addon for setting document.cookie",
   "author": "hwookim <gusdn9754@gmail.com>",
   "homepage": "https://github.com/hwookim/storybook-addon-cookie#readme",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -13,6 +14,11 @@
   },
   "bugs": {
     "url": "https://github.com/hwookim/storybook-addon-cookie/issues"
+  },
+  "scripts": {
+    "dev": "yarn build --watch",
+    "build": "tsc",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@storybook/addons": "^6.4.18"
