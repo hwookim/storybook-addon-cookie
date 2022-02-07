@@ -1,0 +1,20 @@
+{
+  "name": "storybook-addon-cookie",
+  "version": "1.0.0",
+  "description": "Storybook addon for mocking document.cookie",
+  "author": "hwookim <gusdn9754@gmail.com>",
+  "homepage": "https://github.com/hwookim/storybook-addon-cookie#readme",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hwookim/storybook-addon-cookie.git",
+    "directory": "packages/addon"
+  },
+  "bugs": {
+    "url": "https://github.com/hwookim/storybook-addon-cookie/issues"
+  },
+  "dependencies": {
+    "@storybook/addons": "^6.4.18"
+  }
+}
