@@ -15,4 +15,4 @@ WithCookie.parameters = {
     test: 'TEST!',
   },
 };
-export const WithOutCookie = Template.bind({});
+export const WithoutCookie = Template.bind({});
