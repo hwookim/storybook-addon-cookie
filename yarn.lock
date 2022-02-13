@@ -15028,7 +15028,7 @@ store2@^2.12.0:
   integrity sha512-iJtHSGmNgAUx0b/MCS6ASGxb//hGrHHRgzvN+K5bvkBTN7A9RTpPSf1WSp+nPGvWCJ1jRnvY7MKnuqfoi3OEqg==
 
 "storybook-addon-cookie@file:packages/addon":
-  version "1.0.1"
+  version "1.0.2"
   dependencies:
     "@storybook/addons" "^6.4.18"
 

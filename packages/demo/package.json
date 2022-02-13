@@ -1,6 +1,5 @@
 {
   "name": "demo",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
