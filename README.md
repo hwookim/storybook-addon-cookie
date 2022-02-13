@@ -32,7 +32,7 @@ export const decorators = [cookieDecorator];
 
 ## Usage
 
-You can pass cookie object into `cookies` parameter.
+You can pass cookie object into `cookie` parameter.
 
 ```jsx
 export default {
@@ -44,7 +44,7 @@ const Template = () => <Example/>
 
 export const WithCookie = Template.bind({});
 WithCookie.parameters = {
-  cookies: {
+  cookie: {
     test: 'TEST!',
   }
 }
@@ -52,4 +52,4 @@ WithCookie.parameters = {
 export const WithOutCookie = Template.bind({});
 ```
 
-Each Story has independent cookies.
+Each Story has independent cookie.

@@ -5,7 +5,7 @@ export type Cookies = {
 };
 
 export type DecoratorParameters = {
-  cookies?: Cookies;
+  cookie?: Cookies;
 };
 
 export interface DecoratorContext extends StoryContext {
@@ -34,8 +34,8 @@ export const cookieDecorator: DecoratorFunction = (
   { parameters }: DecoratorContext,
 ) => {
   clearCookies();
-  if (parameters && parameters.cookies) {
-    setCookies(parameters.cookies);
+  if (parameters && parameters.cookie) {
+    setCookies(parameters.cookie);
   }
   return storyFn();
 };
