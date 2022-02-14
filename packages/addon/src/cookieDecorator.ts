@@ -13,7 +13,11 @@ export interface DecoratorContext extends StoryContext {
 }
 
 function setCookies(cookies: Cookies) {
-  for (const [key, value] of Object.entries(cookies)) {
+  const entries: [string, string][] = Object.keys(cookies).map((key) => [
+    key,
+    cookies[key],
+  ]);
+  for (const [key, value] of entries) {
     document.cookie = `${key}=${value}`;
   }
 }
