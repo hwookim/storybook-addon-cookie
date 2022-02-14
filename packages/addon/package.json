@@ -6,6 +6,12 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "license": "MIT",
+  "keywords": [
+    "storybook-addon",
+    "cookie",
+    "mocking",
+    "data-state"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hwookim/storybook-addon-cookie.git",
