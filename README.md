@@ -4,6 +4,8 @@
 
 - Set `document.cookie` for each Storybook.
 
+[Live demo](https://www.chromatic.com/library?appId=6208f3782689be003ab39da3)
+
 ## Installing and Setup
 
 ### Install addon
