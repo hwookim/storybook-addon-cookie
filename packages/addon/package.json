@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-cookie",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Storybook addon for setting document.cookie",
   "author": "hwookim <gusdn9754@gmail.com>",
   "main": "dist/index.js",
