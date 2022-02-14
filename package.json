@@ -5,6 +5,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "storybook": "yarn workspace demo storybook",
+    "storybook-build": "yarn workspace storybook-addon-cookie build && yarn workspace demo storybook-build"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.1.0",
     "@typescript-eslint/parser": "^5.1.0",
