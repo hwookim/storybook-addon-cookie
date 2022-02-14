@@ -1,27 +1,23 @@
-name: "Chromatic Deployment"
+name: 'Chromatic Deployment'
 
-on:
-  push:
-    branches:
-      - '**'
-
+on: push
 
 jobs:
-  deploy-chromatic:
+  chromatic-deployment:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./packages/demo
-
     steps:
       - uses: actions/checkout@v1
 
       - name: Install dependencies
-        run: yarn
+        uses: bahmutov/npm-install@v1
+
+      - name: Build addon
+        run: yarn workspace storybook-addon-cookie build
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
+          workingDir: ./packages/demo
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
-          workingDir: ./packages/demo
+          exitOnceUploaded: true
