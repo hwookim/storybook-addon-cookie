@@ -24,7 +24,7 @@ yarn add storybook-addon-cookie -D
 
 ### Configure the addon
 
-Enable MSW in Storybook by initializing MSW and providing the MSW decorator in `./storybook/preview.js`:
+Provide `cookieDecorator` to Storybook by editing `./storybook/preview.js`:
 
 ```js
 import { cookieDecorator } from 'storybook-addon-cookie';
