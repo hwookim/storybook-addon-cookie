@@ -26,6 +26,6 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@storybook/addons": "^6.4.18"
+    "@storybook/addons": "^6.5.13"
   }
 }
