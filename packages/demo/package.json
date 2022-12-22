@@ -1,6 +1,6 @@
 {
   "name": "demo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
@@ -28,7 +28,7 @@
     "@types/react": "^17.0.52",
     "@types/react-dom": "^17.0.18",
     "chromatic": "^6.11.4",
-    "storybook-addon-cookie": "^1.0.5",
+    "storybook-addon-cookie": "^1.0.6",
     "webpack": "^5.75.0"
   },
   "browserslist": {
