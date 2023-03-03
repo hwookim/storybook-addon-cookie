@@ -18,7 +18,7 @@ function setCookies(cookies: Cookies) {
     cookies[key],
   ]);
   for (const [key, value] of entries) {
-    document.cookie = `${key}=${value}`;
+    document.cookie = `${key}=${JSON.stringify(value)}`;
   }
 }
 
