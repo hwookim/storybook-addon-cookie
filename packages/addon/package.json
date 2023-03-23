@@ -25,7 +25,11 @@
     "build": "tsc",
     "prepublishOnly": "yarn build"
   },
-  "dependencies": {
-    "@storybook/addons": "^6.5.13"
+  "devDependencies": {
+    "@storybook/addons": "^6.5.16",
+    "@storybook/components": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }
