@@ -9,12 +9,10 @@
     "incremental": false,
     "isolatedModules": true,
     "jsx": "react",
-    "lib": ["es2020", "dom"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "commonjs",
     "noImplicitAny": true,
     "rootDir": "./src",
-    "declaration": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*"]
 }
