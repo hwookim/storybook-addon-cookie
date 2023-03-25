@@ -29,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@storybook/addons": "^6.5.16",
+    "@storybook/api": "^6.5.16",
     "@storybook/builder-webpack4": "^6.5.16",
     "@storybook/components": "^6.5.16",
     "@storybook/manager-webpack4": "^6.5.16",
