@@ -1,5 +1,10 @@
 <h1 align="center">Storybook Addon Cookie</h1>
 
+<p align="center">
+  <img src="../../assets/demo.gif" align="center" alt="demo"/>
+</p>
+
+
 ## Features
 
 - Set `document.cookie` for each Storybook.
@@ -24,17 +29,41 @@ yarn add storybook-addon-cookie -D
 
 ### Configure the addon
 
-Provide `cookieDecorator` to Storybook by editing `./storybook/preview.js`.
+Add package to storybook configuration.
+
+```javascript
+// .storybook/main.js
+module.exports = {
+  addons: [
+    // ..other addons
+    "storybook-addon-cookie",
+  ]
+}
+```
+
+If you want to use it only in a specific story, you can provide `cookieDecorator` to story.
+
+But you can't control cookie by the panel.
 
 ```js
+// Component.stories.jsx
+import React from 'react';
+import Component from './Component';
+
 import { cookieDecorator } from 'storybook-addon-cookie';
 
-export const decorators = [cookieDecorator];
+export default {
+  title: 'Component',
+  compoent: Component,
+  decorators: [cookieDecorator],
+};
 ```
 
 ## Usage
 
 You can pass cookie object into `cookie` parameter.
+
+Or control cookie by addon panel.
 
 ```jsx
 export default {
