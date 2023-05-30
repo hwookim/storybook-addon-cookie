@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import { useGlobals, useParameter, useStorybookState } from '@storybook/api';
-import { IconButton, Icons, ObjectControl } from '@storybook/components';
+import {
+  useGlobals,
+  useParameter,
+  useStorybookState,
+} from '@storybook/manager-api';
+import { Icons } from '@storybook/components';
+import { ObjectControl } from '@storybook/blocks';
 
 import { PARAM_KEY } from '../constants';
 import { Cookie } from '../types';
 import { clearCookies, setCookies } from '../utils';
 
-const PanelContent: React.FC = () => {
+export const PanelContent: React.FC = () => {
   const { path } = useStorybookState();
   const defaultCookie = useParameter<Cookie>(PARAM_KEY, {});
 
@@ -34,10 +39,10 @@ const PanelContent: React.FC = () => {
 
   return (
     <div style={{ padding: '10px 20px' }}>
-      <IconButton style={{ marginBottom: '5px' }} onClick={handleClear}>
+      <button style={{ marginBottom: '5px' }} onClick={handleClear}>
         <Icons style={{ marginRight: '5px' }} icon="trash" />
         Clear All Cookies
-      </IconButton>
+      </button>
       <ObjectControl
         name="cookie"
         onChange={handleChange}
@@ -47,5 +52,3 @@ const PanelContent: React.FC = () => {
     </div>
   );
 };
-
-export default PanelContent;

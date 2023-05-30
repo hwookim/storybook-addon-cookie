@@ -9,5 +9,5 @@ export function config(entry: unknown[] = []): unknown[] {
 }
 
 export function managerEntries(entry: unknown[] = []): unknown[] {
-  return [...entry, require.resolve('./register')];
+  return [...entry, require.resolve('./manager')];
 }

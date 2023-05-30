@@ -1,3 +1,8 @@
+import type { Renderer, ProjectAnnotations } from '@storybook/types';
 import { cookieDecorator } from './cookieDecorator';
 
-export const decorators = [cookieDecorator];
+const preview: ProjectAnnotations<Renderer> = {
+  decorators: [cookieDecorator],
+};
+
+export default preview;

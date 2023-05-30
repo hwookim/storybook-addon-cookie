@@ -1,14 +1,19 @@
-import { DecoratorFunction, StoryContext } from '@storybook/addons';
+import type {
+  Renderer,
+  PartialStoryFn as StoryFunction,
+  StoryContext,
+} from '@storybook/types';
+import { useState } from '@storybook/preview-api';
+
 import { CookieParameter } from './types';
 import { clearCookies, setCookies } from './utils';
-import { useState } from 'react';
 
-export interface DecoratorContext extends StoryContext {
+export interface DecoratorContext extends StoryContext<Renderer> {
   parameters: StoryContext['parameters'] & CookieParameter;
 }
 
-export const cookieDecorator: DecoratorFunction = (
-  storyFn,
+export const cookieDecorator = (
+  storyFn: StoryFunction<Renderer>,
   { parameters }: DecoratorContext,
 ) => {
   const [flag, setFlag] = useState<boolean>(true);

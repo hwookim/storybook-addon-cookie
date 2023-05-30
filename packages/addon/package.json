@@ -26,19 +26,14 @@
     "prepublishOnly": "yarn build"
   },
   "devDependencies": {
-    "@storybook/addons": "^6.5.16",
-    "@storybook/api": "^6.5.16",
-    "@storybook/components": "^6.5.16",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "@storybook/addons": "^6.5.16 || ^7.0.0-rc.0",
-    "@storybook/api": "^6.5.16 || ^7.0.0-rc.0",
-    "@storybook/components": "^6.5.16 || ^7.0.0-rc.0",
+    "@storybook/blocks": "^7.0.0",
+    "@storybook/components": "^7.0.0",
+    "@storybook/manager-api": "^7.0.0",
+    "@storybook/preview-api": "^7.0.0",
+    "@storybook/types": "^7.0.0",
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },

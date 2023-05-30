@@ -28,7 +28,7 @@
     "prop-types": "^15.8.1",
     "storybook": "^7.0.18",
     "storybook-addon-cookie": "^2.1.0",
-    "typescript": "^5.0.2",
+    "typescript": "^5.0.4",
     "webpack": "^5.75.0"
   }
 }
