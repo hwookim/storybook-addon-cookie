@@ -1,18 +1,18 @@
-import React from 'react';
 import Demo from './Demo';
-import { ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-export default {
+const meta: Meta<typeof Demo> = {
+  title: 'web/DefaultButton',
   component: Demo,
-  title: 'Demo',
 };
+export default meta;
+type Story = StoryObj<typeof Demo>;
 
-const Template: ComponentStory<typeof Demo> = () => <Demo />;
-
-export const WithCookie = Template.bind({});
-WithCookie.parameters = {
-  cookie: {
-    test: 'TEST!',
+export const WithCookie: Story = {
+  parameters: {
+    cookie: {
+      test: 'TEST!',
+    },
   },
 };
-export const WithoutCookie = Template.bind({});
+export const WithoutCookie: Story = {};
