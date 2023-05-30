@@ -17,7 +17,7 @@ export const PanelContent: React.FC = () => {
 
   const [story, setStory] = useState<string>(path);
   const [value, setValue] = useState<Cookie>();
-  const [_, updateGlobals] = useGlobals();
+  const [globals, updateGlobals] = useGlobals();
 
   if (path !== story && value) {
     setStory(path);
@@ -28,13 +28,13 @@ export const PanelContent: React.FC = () => {
     clearCookies();
     setCookies(newValue);
     setValue(newValue);
-    updateGlobals({});
+    updateGlobals({ ...globals });
   };
 
   const handleClear = () => {
     clearCookies();
     setValue({});
-    updateGlobals({});
+    updateGlobals({ ...globals });
   };
 
   return (
