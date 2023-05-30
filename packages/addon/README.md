@@ -4,6 +4,11 @@
   <img src="../../assets/demo.gif" align="center" alt="demo"/>
 </p>
 
+### Support Storybook v7
+
+Starting with storybook-addon-cookie v3, it supports storybook v7.
+
+Use v2.x if you're using storybook v6.x.
 
 ## Features
 
@@ -36,9 +41,9 @@ Add package to storybook configuration.
 module.exports = {
   addons: [
     // ..other addons
-    "storybook-addon-cookie",
-  ]
-}
+    'storybook-addon-cookie',
+  ],
+};
 ```
 
 If you want to use it only in a specific story, you can provide `cookieDecorator` to story.
@@ -69,16 +74,16 @@ Or control cookie by addon panel.
 export default {
   component: Example,
   title: 'Example',
-}
+};
 
-const Template = () => <Example/>
+const Template = () => <Example />;
 
 export const WithCookie = Template.bind({});
 WithCookie.parameters = {
   cookie: {
     test: 'TEST!',
-  }
-}
+  },
+};
 
 export const WithOutCookie = Template.bind({});
 ```
