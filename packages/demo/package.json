@@ -1,6 +1,6 @@
 {
   "name": "demo",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "private": true,
   "scripts": {
     "storybook": "storybook dev -p 6006",
@@ -23,7 +23,7 @@
     "chromatic": "^6.11.4",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.18",
-    "storybook-addon-cookie": "^3.0.0",
+    "storybook-addon-cookie": "^3.0.1",
     "typescript": "^5.0.4",
     "webpack": "^5.75.0"
   }
