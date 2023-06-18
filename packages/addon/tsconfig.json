@@ -13,7 +13,8 @@
     "module": "commonjs",
     "noImplicitAny": true,
     "rootDir": "./src",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "declaration": true,
   },
   "exclude": ["dist"]
 }
