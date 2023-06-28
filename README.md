@@ -1,7 +1,7 @@
 <h1 align="center">Storybook Addon Cookie</h1>
 
 <p align="center">
-  <img src="../assets/demo.gif" align="center" alt="demo"/>
+  <img src="./assets/demo.gif" align="center" alt="demo"/>
 </p>
 
 ### Support Storybook v7
