@@ -46,24 +46,6 @@ module.exports = {
 };
 ```
 
-If you want to use it only in a specific story, you can provide `cookieDecorator` to story.
-
-But you can't control cookie by the panel.
-
-```js
-// Component.stories.jsx
-import React from 'react';
-import Component from './Component';
-
-import { cookieDecorator } from 'storybook-addon-cookie';
-
-export default {
-  title: 'Component',
-  compoent: Component,
-  decorators: [cookieDecorator],
-};
-```
-
 ## Usage
 
 You can pass cookie object into `cookie` parameter.
