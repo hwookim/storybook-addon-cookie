@@ -1,11 +1,15 @@
 import { Cookie } from './types';
 
-export function setCookie(name: string, value: unknown) {
-  document.cookie = `${name}=${JSON.stringify(value)}`;
+export function setCookie(name: string, value: string) {
+  if (typeof value !== 'string') {
+    document.cookie = `${name}=${JSON.stringify(value)};`;
+  } else {
+    document.cookie = `${name}=${value};`;
+  }
 }
 
 export function setCookies(cookie: Cookie) {
-  const entries: [string, unknown][] = Object.keys(cookie).map((name) => [
+  const entries: [string, string][] = Object.keys(cookie).map((name) => [
     name,
     cookie[name],
   ]);
