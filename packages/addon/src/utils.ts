@@ -4,7 +4,8 @@ export function setCookie(name: string, value: string) {
   if (typeof value !== 'string') {
     document.cookie = `${name}=${JSON.stringify(value)};`;
   } else {
-    document.cookie = `${name}=${value};`;
+    const encodedValue = encodeURIComponent(value);
+    document.cookie = `${name}=${encodedValue};`;
   }
 }
 
