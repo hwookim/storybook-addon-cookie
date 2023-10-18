@@ -1,4 +1,4 @@
-export type Cookie = Record<string, unknown>;
+export type Cookie = Record<string, string>;
 
 export type CookieParameter = {
   cookie?: Cookie;
