@@ -7,13 +7,14 @@ import {
 import { Icons } from '@storybook/components';
 import { ObjectControl } from '@storybook/blocks';
 
-import { PARAM_KEY } from '../constants';
+import { PARAM_ENCONDING_KEY, PARAM_KEY } from '../constants';
 import { Cookie } from '../types';
 import { clearCookies, setCookies } from '../utils';
 
 export const PanelContent: React.FC = () => {
   const { path } = useStorybookState();
   const defaultCookie = useParameter<Cookie>(PARAM_KEY, {});
+  const encoding = useParameter<boolean>(PARAM_ENCONDING_KEY, false);
 
   const [story, setStory] = useState<string>(path);
   const [value, setValue] = useState<Cookie>();
@@ -26,7 +27,7 @@ export const PanelContent: React.FC = () => {
 
   const handleChange = (newValue: Cookie) => {
     clearCookies();
-    setCookies(newValue);
+    setCookies(newValue, encoding);
     setValue(newValue);
     updateGlobals({ ...globals });
   };

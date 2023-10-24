@@ -1,19 +1,22 @@
 import { Cookie } from './types';
 
-export function setCookie(name: string, value: string) {
+export function setCookie(name: string, value: string, encoding?: boolean) {
+  let cookieValue;
   if (typeof value === 'string') {
-    document.cookie = `${name}=${value};`;
+    cookieValue = encoding ? encodeURIComponent(value) : value;
   } else {
-    document.cookie = `${name}=${JSON.stringify(value)};`;
+    cookieValue = JSON.stringify(value);
+    encoding && (cookieValue = encodeURIComponent(cookieValue));
   }
+  document.cookie = `${name}=${cookieValue};`;
 }
 
-export function setCookies(cookie: Cookie) {
+export function setCookies(cookie: Cookie, encoding?: boolean) {
   const entries: [string, string][] = Object.keys(cookie).map((name) => [
     name,
     cookie[name],
   ]);
-  entries.forEach(([name, value]) => setCookie(name, value));
+  entries.forEach(([name, value]) => setCookie(name, value, encoding));
 }
 
 export function clearCookies() {

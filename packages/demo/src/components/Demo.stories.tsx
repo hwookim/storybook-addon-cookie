@@ -15,4 +15,14 @@ export const WithCookie: Story = {
     },
   },
 };
+
+export const WithEncodedCookie: Story = {
+  parameters: {
+    cookie: {
+      test: 'TEST!',
+    },
+    cookieEncoding: true,
+  },
+};
+
 export const WithoutCookie: Story = {};

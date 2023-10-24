@@ -21,7 +21,7 @@ export const cookieDecorator = (
   if (flag) {
     clearCookies();
     if (parameters && parameters.cookie) {
-      setCookies(parameters.cookie);
+      setCookies(parameters.cookie, parameters.cookieEncoding);
     }
     setFlag(false);
   }
