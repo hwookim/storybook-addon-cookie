@@ -71,3 +71,22 @@ export const WithOutCookie = Template.bind({});
 ```
 
 Each Story has independent cookie.
+
+### Encoding cookie
+
+If you want to encode the cookies on the panel, you can use the `cookieEncoding` option.
+
+```jsx
+export const WithEncodedCookie: Story = {
+  parameters: {
+    cookie: {
+      test: 'TEST!',
+    },
+    cookieEncoding: true,
+  },
+};
+```
+
+This option defaults to `false`.
+
+You can use this option after `v3.1.0`
