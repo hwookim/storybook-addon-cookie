@@ -1,11 +1,10 @@
 import { Cookie } from './types';
 
 export function setCookie(name: string, value: string) {
-  if (typeof value !== 'string') {
-    document.cookie = `${name}=${JSON.stringify(value)};`;
+  if (typeof value === 'string') {
+    document.cookie = `${name}=${value};`;
   } else {
-    const encodedValue = encodeURIComponent(value);
-    document.cookie = `${name}=${encodedValue};`;
+    document.cookie = `${name}=${JSON.stringify(value)};`;
   }
 }
 
