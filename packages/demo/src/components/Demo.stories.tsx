@@ -26,3 +26,9 @@ export const WithEncodedCookie: Story = {
 };
 
 export const WithoutCookie: Story = {};
+
+export const PreserveCookie: Story = {
+  parameters: {
+    cookiePreserve: true,
+  },
+};

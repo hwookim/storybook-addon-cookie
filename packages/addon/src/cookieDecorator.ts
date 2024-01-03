@@ -7,6 +7,7 @@ import { useState } from '@storybook/preview-api';
 
 import { CookieParameter } from './types';
 import { clearCookies, setCookies } from './utils';
+import { PARAM_KEY, PARAM_PRESERVE_KEY } from './constants';
 
 export interface DecoratorContext extends StoryContext<Renderer> {
   parameters: StoryContext['parameters'] & CookieParameter;
@@ -19,11 +20,16 @@ export const cookieDecorator = (
   const [flag, setFlag] = useState<boolean>(true);
 
   if (flag) {
-    clearCookies();
-    if (parameters && parameters.cookie) {
+    setFlag(false);
+    if (!parameters) return storyFn();
+
+    if (parameters[PARAM_PRESERVE_KEY] !== true) {
+      clearCookies();
+    }
+
+    if (parameters[PARAM_KEY]) {
       setCookies(parameters.cookie, parameters.cookieEncoding);
     }
-    setFlag(false);
   }
 
   return storyFn();
