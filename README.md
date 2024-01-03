@@ -90,3 +90,24 @@ export const WithEncodedCookie: Story = {
 This option defaults to `false`.
 
 You can use this option after `v3.1.0`
+
+### Preserve existing cookies
+
+If you want to preserve existing cookies, you can use the `cookiePreserve` option.
+
+Preserve existing cookies, but only manipulate the ones you specify via parameters.
+
+```jsx
+export const PreserveCookies: Story = {
+  parameters: {
+    cookie: {
+      test: 'TEST!',
+    },
+    cookiePreserve: true,
+  },
+};
+```
+
+This option defaults to `false`.
+
+You can use this option after `v3.2.0`
