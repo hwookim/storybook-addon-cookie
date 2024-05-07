@@ -4,7 +4,7 @@ import {
   useParameter,
   useStorybookState,
 } from '@storybook/manager-api';
-import { Icons } from '@storybook/components';
+import Icons from '@storybook/icons';
 import { ObjectControl } from '@storybook/blocks';
 
 import { PARAM_ENCONDING_KEY, PARAM_KEY } from '../constants';
@@ -41,7 +41,7 @@ export const PanelContent: React.FC = () => {
   return (
     <div style={{ padding: '10px 20px' }}>
       <button style={{ marginBottom: '5px' }} onClick={handleClear}>
-        <Icons style={{ marginRight: '5px' }} icon="trash" />
+        <Icons.TrashIcon style={{ marginRight: '5px' }} />
         Clear All Cookies
       </button>
       <ObjectControl

@@ -6,25 +6,23 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0"
-  },
   "devDependencies": {
-    "@storybook/blocks": "^7.0.18",
-    "@storybook/preset-create-react-app": "^7.0.18",
-    "@storybook/react": "^7.0.18",
-    "@storybook/react-webpack5": "^7.0.18",
-    "@types/node": "^16.18.3",
-    "@types/react": "^17.0.52",
-    "@types/react-dom": "^17.0.18",
+    "@storybook/blocks": "latest",
+    "@storybook/preset-create-react-app": "latest",
+    "@storybook/react": "latest",
+    "@storybook/react-webpack5": "latest",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "babel-plugin-named-exports-order": "^0.0.2",
-    "chromatic": "^6.11.4",
+    "chromatic": "^6.24.1",
     "prop-types": "^15.8.1",
-    "storybook": "^7.0.18",
-    "storybook-addon-cookie": "^3.2.0",
-    "typescript": "^5.0.4",
-    "webpack": "^5.75.0"
+    "storybook": "^8.0.0",
+    "storybook-addon-cookie": "^8.0.0",
+    "typescript": "^5.4.5",
+    "webpack": "^5.91.0"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
   }
 }
