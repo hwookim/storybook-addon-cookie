@@ -12,6 +12,7 @@ export function setCookie(name: string, value: string, encoding?: boolean) {
 }
 
 export function setCookies(cookie: Cookie, encoding?: boolean) {
+  console.log('setCookies', cookie);
   const entries: [string, string][] = Object.keys(cookie).map((name) => [
     name,
     cookie[name],
@@ -20,6 +21,7 @@ export function setCookies(cookie: Cookie, encoding?: boolean) {
 }
 
 export function clearCookies() {
+  console.log('clearCookies');
   const cookie = document.cookie.split(';');
 
   cookie.forEach((cookie) => {

@@ -18,6 +18,7 @@ export const cookieDecorator = (
   { parameters }: DecoratorContext,
 ) => {
   const [flag, setFlag] = useState<boolean>(true);
+  console.log('cookieDecorator', parameters);
 
   if (flag) {
     setFlag(false);
