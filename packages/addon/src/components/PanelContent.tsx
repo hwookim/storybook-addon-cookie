@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   useGlobals,
   useParameter,
@@ -13,17 +13,25 @@ import { clearCookies, setCookies } from '../utils';
 
 export const PanelContent: React.FC = () => {
   const { path } = useStorybookState();
-  const defaultCookie = useParameter<Cookie>(PARAM_KEY, {});
+  const defaultCookie = useParameter<Cookie>(PARAM_KEY, {}); // TODO: Doesn't work on initial load
   const encoding = useParameter<boolean>(PARAM_ENCONDING_KEY, false);
 
-  const [story, setStory] = useState<string>(path);
+  const [story, setStory] = useState<string>();
   const [value, setValue] = useState<Cookie>();
   const [globals, updateGlobals] = useGlobals();
 
-  if (path !== story && value) {
+  const initCookie = () => {
     setStory(path);
     setValue(defaultCookie);
-  }
+    clearCookies();
+    setCookies(defaultCookie, encoding);
+  };
+
+  useEffect(() => {
+    if (story !== path) {
+      initCookie();
+    }
+  }, [path, story]);
 
   const handleChange = (newValue: Cookie) => {
     clearCookies();

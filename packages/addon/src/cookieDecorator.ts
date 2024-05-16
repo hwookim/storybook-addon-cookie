@@ -13,6 +13,7 @@ export interface DecoratorContext extends StoryContext<Renderer> {
   parameters: StoryContext['parameters'] & CookieParameter;
 }
 
+// Not calling decorator logic
 export const cookieDecorator = (
   storyFn: StoryFunction<Renderer>,
   { parameters }: DecoratorContext,
