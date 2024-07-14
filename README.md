@@ -4,11 +4,13 @@
   <img src="./assets/demo.gif" align="center" alt="demo"/>
 </p>
 
-### Support Storybook v7
+### Support Storybook v8
 
-Starting with storybook-addon-cookie v3, it supports storybook v7.
+Starting with storybook-addon-cookie v4.0.0-alpha.0, it supports storybook v8.
 
-Use v2.x if you're using storybook v6.x.
+storybook v7 -> storybook-addon-cookie v3.x
+
+storybook v6 -> storybook-addon-cookie v2.x
 
 ## Features
 
