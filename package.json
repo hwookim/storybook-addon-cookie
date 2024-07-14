@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "dev-addon": "yarn workspace storybook-addon-cookie dev",
+    "dev-addon": "yarn workspace storybook-addon-cookie build:watch",
     "build-addon": "yarn workspace storybook-addon-cookie build",
     "storybook": "yarn workspace demo storybook",
     "build-storybook": "yarn build-addon && yarn workspace demo build-storybook"

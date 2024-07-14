@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "target": "es5",
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "esModuleInterop": true,
@@ -9,12 +7,12 @@
     "incremental": false,
     "isolatedModules": true,
     "jsx": "react",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["es2020", "dom"],
     "module": "commonjs",
     "noImplicitAny": true,
     "rootDir": "./src",
     "skipLibCheck": true,
-    "declaration": true,
+    "target": "ES2020"
   },
-  "exclude": ["dist"]
+  "include": ["src/**/*"]
 }
