@@ -47,7 +47,7 @@ export const PanelContent: React.FC = () => {
       <ObjectControl
         name="cookie"
         onChange={handleChange}
-        value={value}
+        value={value ?? {}}
         theme=""
       />
     </div>
