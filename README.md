@@ -6,7 +6,7 @@
 
 ### Support Storybook v8
 
-Starting with storybook-addon-cookie v4.0.0-alpha.0, it supports storybook v8.
+Starting with storybook-addon-cookie v4.0.0, it supports storybook v8.
 
 storybook v7 -> storybook-addon-cookie v3.x
 
