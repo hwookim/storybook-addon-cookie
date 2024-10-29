@@ -1,49 +1,41 @@
 import React, { useEffect, useState } from 'react';
-import {
-  useGlobals,
-  useParameter,
-  useStorybookState,
-} from '@storybook/manager-api';
+import { useGlobals, useParameter } from '@storybook/manager-api';
 import Icons from '@storybook/icons';
 import { ObjectControl } from '@storybook/blocks';
 
-import { PARAM_ENCONDING_KEY, PARAM_KEY } from '../constants';
+import { PARAM_ENCODING_KEY, PARAM_KEY } from '../constants';
 import { Cookie } from '../types';
 import { clearCookies, setCookies } from '../utils';
 
 export const PanelContent: React.FC = () => {
-  const { path } = useStorybookState();
-  const defaultCookie = useParameter<Cookie>(PARAM_KEY, {}); // TODO: Doesn't work on initial load
-  const encoding = useParameter<boolean>(PARAM_ENCONDING_KEY, false);
+  const defaultCookie = useParameter<Cookie>(PARAM_KEY, null);
+  const encoding = useParameter<boolean>(PARAM_ENCODING_KEY, false);
 
-  const [story, setStory] = useState<string>();
   const [value, setValue] = useState<Cookie>();
   const [globals, updateGlobals] = useGlobals();
 
-  const initCookie = () => {
-    setStory(path);
-    setValue(defaultCookie);
+  const updateCookieValue = (newValue: Cookie | null) => {
+    setValue(newValue ?? {});
     clearCookies();
-    setCookies(defaultCookie, encoding);
+    if (newValue) {
+      setCookies(newValue, encoding);
+    }
+    updateGlobals({ ...globals });
   };
 
   useEffect(() => {
-    if (story !== path) {
-      initCookie();
+    if (!defaultCookie && !value) {
+      return;
     }
-  }, [path, story]);
+    updateCookieValue(defaultCookie);
+  }, [defaultCookie, encoding]);
 
   const handleChange = (newValue: Cookie) => {
-    clearCookies();
-    setCookies(newValue, encoding);
-    setValue(newValue);
-    updateGlobals({ ...globals });
+    updateCookieValue(newValue);
   };
 
   const handleClear = () => {
-    clearCookies();
-    setValue({});
-    updateGlobals({ ...globals });
+    updateCookieValue(null);
   };
 
   return (
@@ -55,7 +47,7 @@ export const PanelContent: React.FC = () => {
       <ObjectControl
         name="cookie"
         onChange={handleChange}
-        value={value || defaultCookie}
+        value={value}
         theme=""
       />
     </div>
